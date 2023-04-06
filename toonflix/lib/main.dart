@@ -5,5 +5,5 @@ void main() {
 }
 
 class App{
-  
+
 }
