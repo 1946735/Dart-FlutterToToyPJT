@@ -9,13 +9,43 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-            appBar: AppBar(
-              title: const Text('Hello flutter'),
+    return const MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.black,
+        body: Column(
+          children: [
+            // SizedBox 클래스를 넣어줌으로써 공간을 만들 수 있다.
+            SizedBox(
+              height: 50,
+              width: 10,
             ),
-            body: const Center(
-              child: Text('Hello World'),
-            )));
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      'Hi, Minseok!',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 38,
+                      ),
+                    ),
+                    Text(
+                      'Welcome Back!',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
